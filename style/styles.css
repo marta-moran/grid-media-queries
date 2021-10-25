@@ -1,0 +1,113 @@
+/*$bg-color: rgb(229, 186, 229);*/
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:  "header " "main" "aside" "footer";
+    row-gap: 5px;
+}
+
+.grid-container div {
+    background-color: rgb(229, 186, 229);
+    font-size: 32px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+
+
+@media screen and (min-width: 767px) {
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "footer footer footer";
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.grid-container > .main{
+text-align: start;
+}
+
+.grid-container > div .art2{
+   text-align: start;
+}
+.grid-container >  div .art1{
+    text-align: start;
+ }
+ 
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+   
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 30px;
+}
+}
+
+
+@media screen and (min-width: 950px) {
+.grid-container {
+    display: grid;
+    grid-template-areas:    "header header header"
+                            "aside" "main" "main"
+                            "aside" "main" "main"
+                            "footer" "footer" "footer";
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    padding-left: 100px;
+}
+
+.articulos {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 300px;
+    
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 30px;
+}
+}
